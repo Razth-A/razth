@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  background: linear-gradient(to bottom, maroon, gray);
+  width: 20vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.brand {
+  height: 10vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.brand i {
+  font-size: 20px;
+}
+
+.sidebar ul li {
+  padding: 10px 40px;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: red;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 10vh;
+  background: maroon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  border: none;
+  background: gray;
+  padding: 10px;
+  width: 50%;
+}
+
+.search button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #999;
+}
+
+.user {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.user i {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  padding: 5px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  color: #ffffff;
+  margin: 5px 5px;
+}
+
+.content {
+  position: relative;
+  margin-top: 10vh;
+  min-height: 90vh;
+  background: linear-gradient(to bottom, maroon, gray);
+}
+
+.cards {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 230px;
+  height: 130px;
+  background: white;
+  margin: 15px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 22, 189, 0.675),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.box h1 {
+  color: rgb(3, 90, 203);
+}
+
+.icon {
+  color: gray;
+  font-size: 40px;
+}
+
+i:hover {
+  color: rgb(17, 154, 212);
+}
+
+.content-2 {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.payment {
+  border-radius: 10px;
+  min-height: 50vh;
+  flex: 5;
+  background: white;
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px;
+  border-bottom: 2px solid #999;
+}
+
+.title .btn,
+.payment .btn {
+  background: #191919;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.title .btn:hover,
+.payment .btn:hover {
+  color: #191919;
+  background: rgb(46, 135, 213);
+  padding: 5px 10px;
+  text-align: center;
+}
+
+table {
+  text-align: left;
+  padding: 10px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+.patners {
+  border-radius: 10px;
+  flex: 2;
+  background: white;
+  min-height: 50vh;
+  margin: 0 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.patners table td i {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+  .sidebar ul li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .sidebar ul li span {
+    display: none;
+  }
+  .sidebar {
+    align-items: center;
+  }
+  .sidebar ul li i {
+    font-size: 30px;
+  }
+  .sidebar ul li:hover {
+    padding: 8px 38px;
+  }
+}
+
+@media screen and (max-width: 536px) {
+  .brand h1 {
+    display: none;
+  }
+  .brand i {
+    font-size: 30px;
+  }
+  .cards {
+    justify-content: center;
+  }
+  .sidebar ul li i {
+    font-size: 20px;
+  }
+}
